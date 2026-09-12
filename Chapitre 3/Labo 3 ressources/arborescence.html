@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Une page web</title>
+    <style>
+    .cadre {
+      border: 1px solid blue;
+      padding: 6px;
+    }
+    a::after { color: green;content: "(" attr(href) ")";}
+    .important::before {content : url("warning.jpg") " ";}
+    </style>
+  </head>
+  <body>
+    <p>Il s'agit d'une page <a href="http://fr.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a> créée dans le cadre d'un cours pour les études en <a href="http://www.henallux.be/informatique-de-gestion">Informatique de Gestion</a> à l'<a href="www.henallux.be/">Henallux</a>.</p>
+    <div class="cadre">
+      <h3>Note très importante</h3>
+      <p class="important">Vous pouvez recopier cette page, en totalité ou en partie, à condition que vous indiquiez de manière claire votre source d'<a href="http://www.linternaute.com/dictionnaire/fr/definition/inspiration/">inspiration</a>. Sans cela,
+      ce serait du <a href="http://fr.wikipedia.org/wiki/Plagiat">plagiat</a> !</p>
+      <p>Fin de la note importante.</p>
+    </div>
+    <p id="savoir">Si vous désirez en savoir plus sur <a href="http://fr.wikipedia.org/wiki/Hypertext_Markup_Language">HTML</a> ou <a href="http://fr.wikipedia.org/wiki/CSS">CSS</a>, vous pouvez par exemple consulter le site du <a href="http://www.w3.org/">W3C</a> ou encore les leçons du site <a href="http://www.w3schools.com/">W3Schools</a>.</p>
+    <p class="important">Méfiez-vous toutefois : il existe de nombreux sites sur le sujet où on raconte des vraies <a href="http://fr.wikipedia.org/wiki/B%C3%AAtise">bêtises</a> ! N'importe qui peut créer une page web et placer n'importe quel contenu sur la <a href="http://fr.wikipedia.org/wiki/World_Wide_Web">Toile</a> ! Ce n'est pas parce que quelque chose se trouve en ligne qu'il s'agit de la vérité !</p>
+    <div class="cadre">
+      <p>Pour réussir dans ce cours, il est important de travailler régulièrement les laboratoires. Ceux qui pensent pouvoir réussir sans s'entraîner régulièrement <a href="http://fr.wiktionary.org/wiki/se_fourrer_le_doigt_dans_l%E2%80%99%C5%93il">se fourrent le doigt dans l'œil</a> ! Ce n'est pas parce que l'examen se déroule à cours ouvert qu'aucune préparation n'est nécessaire !</p>
+    </div>
+  </body>
+</html>

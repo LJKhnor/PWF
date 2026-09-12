@@ -1,0 +1,37 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 50px;
+}
+
+h1 {
+  color: dark;
+  font-family: "Caudex", serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+table, tr,td,th {
+  border: 1px solid;
+   margin: auto;
+}
+
+td, th{
+  padding-left: 5px;
+    padding-right: 5px;
+}
+img{
+ margin: auto;
+ display: inline-block;
+  width:250px;
+}
+.img3 img{
+  display: inline;  
+}
+a{
+  color: black;
+}
+.corp{
+  background-color: white;
+  padding: 10px;
+}

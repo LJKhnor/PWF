@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  width: 80%;
+  margin: auto;
+  color: #fff;
+}
+#content{
+  background-color: #333;
+  padding: 0 20px;
+  min-width: 671px;
+}
+h1,h2,h3 {
+  font-family: 'Metamorphous', sans-serif;
+  color: lightgoldenrodyellow;
+}
+h1 {
+  color: dark;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 25px;
+  width: 50%;
+  text-transform: uppercase;
+}
+table{
+  border-collapse: collapse;
+  margin: auto;
+}
+table, tr,td,th {
+    border: 1px solid;
+}
+table th,td{
+    padding: 2px 5px;
+    text-align: center;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Jeux_dérivés_images {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+a, a:visited {
+    color : lightgoldenrodyellow;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul li{
+  margin-bottom: 5px;
+}
+h1+p{
+  margin-top: 50px;
+  margin: 50px auto;
+  width: 75%;
+  text-align: center;
+}
+h3{
+  margin-top: 50px;
+}
+h2{
+  margin-top: 75px;
+}
+b{
+  color: gold;
+}
+nav ul li{
+  display: flex;           /* Flex pour centrer verticalement */
+  align-items: center;     /* Centre le contenu verticalement */
+  justify-content: center; /* Centre horizontalement */
+  flex: 1;
+  text-align: center;
+  height: 60px; 
+  margin-bottom: 0;
+}
+nav ul{
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Répartit l'espace entre les éléments */
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+nav{
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: lightgoldenrodyellow;
+  position: sticky;
+  top: 0px;
+  margin-left: -20px;
+  margin-right: -20px;
+  width: calc(100%+40px);
+}
+nav a, nav a:visited{
+  color: black;
+  font-weight: bold;
+  display: flex;                /* Flex sur le <a> */
+  align-items: center;          /* Centre verticalement */
+  justify-content: center;      /* Centre horizontalement */
+  width: 100%;
+  height: 100%;
+  line-height: normal;          /* Désactive le line-height forcé */
+  text-align: center;
+  gap: 8px;   
+}
+nav ul li a img{
+  width: 150px;                  /* Ajuste la taille selon ton besoin */
+  height: auto;
+  display: block;
+  animation: blackHome 4.9s forwards;
+  opacity: 0;
+}
+#intro-animation {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: introShrinkMove 5s forwards;
+  pointer-events: none;
+}
+#intro-animation img {
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  transition: none;
+}
+@keyframes introShrinkMove {
+  0% {
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  60% {
+    opacity: 0.8;
+    transform: scale(0.2) translate(0, 0);
+    border-radius: 20px;
+  }
+  80% {
+    opacity: 0.5;
+    transform: scale(0.092) translate(-326.1vw, -127vh); /* Ajuste la destination */
+    border-radius: 20px;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.092) translate(-326.1vw, -127vh);
+    pointer-events: none;
+    background: none;
+  }
+}
+@keyframes blackHome {
+  0% {
+    opacity:0 ;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

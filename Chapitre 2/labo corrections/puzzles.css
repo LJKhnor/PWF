@@ -1,0 +1,58 @@
+
+body {
+    background-color: black;
+}
+header, main, footer{
+    width: 800px;
+    margin-right:auto;
+    margin-left: auto;
+    background-color: lemonchiffon;
+    padding: 6px;
+}
+header {
+    margin-bottom: 4px;
+}
+footer {
+    margin-top: 4px;
+    color: grey;
+    font-style: italic;
+    text-align: center;
+}
+h1 {
+    font-size: 200%;
+    background-color: orange;
+    padding: 3px;
+}
+article {
+    border: 2px dotted black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    margin: 4px;
+    padding: 12px;
+}
+h2 {
+    background-color: palegoldenrod;
+    background-image: url('ampoule.png');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    padding-left: 40px;
+}
+.solution {
+    color: lemonchiffon;
+    border: 1px solid orange;
+    padding:4px;
+    margin-bottom: 0;
+}
+.solution:hover {
+    color: black;
+}
+#gateau {
+    width: 200px;
+}
+.enonce {
+    font-style: italic;
+}
+.pyramide{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}

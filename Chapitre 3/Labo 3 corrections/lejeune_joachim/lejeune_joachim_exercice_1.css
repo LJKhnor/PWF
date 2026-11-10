@@ -1,0 +1,88 @@
+/* =========================================================
+   Labo 3 — Exercice 1 : arborescence HTML (corrigé)
+   ========================================================= */
+
+/* Règle reprise du <style> du fichier de départ */
+.cadre {
+  border: 1px solid blue;
+  padding: 6px;
+}
+
+/* ---------------------------------------------------------
+   Étape 5 — Décoder des sélecteurs complexes
+   Pour tester, décommentez UNE seule ligne à la fois (Ctrl + /).
+   La flèche indique ce qui est ciblé dans arborescence.html.
+   --------------------------------------------------------- */
+
+/* p a                  { color: yellow; background-color: black; }   → les 12 liens (tous sont dans un paragraphe) */
+/* .cadre a             { color: yellow; background-color: black; }   → inspiration, plagiat, se fourrent le doigt dans l'œil */
+/* body > p             { color: yellow; background-color: black; }   → 1er paragraphe, #savoir, 2e p.important */
+/* p + p                { color: yellow; background-color: black; }   → « Fin de la note importante », 2e p.important */
+/* a + a + a            { color: yellow; background-color: black; }   → Henallux, W3C, W3Schools (3e lien et suivants) */
+/* div + p              { color: yellow; background-color: black; }   → p#savoir */
+/* div ~ p              { color: yellow; background-color: black; }   → p#savoir, 2e p.important */
+/* div.important        { color: yellow; background-color: black; }   → rien : aucun div n'a la classe important */
+/* div .important       { color: yellow; background-color: black; }   → le p.important du 1er cadre */
+/* #savoir + p a        { color: yellow; background-color: black; }   → bêtises, Toile */
+/* a:first-child        { color: yellow; background-color: black; }   → 1er lien de chaque paragraphe (5 liens) */
+/* p:last-child         { color: yellow; background-color: black; }   → « Fin de la note… », paragraphe du 2e cadre */
+/* p:last-of-type       { color: yellow; background-color: black; }   → « Fin de la note… », 2e p.important, p du 2e cadre */
+/* :nth-child(3)        { color: yellow; background-color: black; }   → #savoir, « Fin de la note… », Henallux, W3C (+ <style> invisible) */
+/* a[href*=".com"]      { color: yellow; background-color: black; }   → inspiration, W3Schools */
+/* p:hover a            { color: yellow; background-color: black; }   → les liens du paragraphe survolé */
+/* p:first-child a      { color: yellow; background-color: black; }   → liens du 1er paragraphe + lien du 2e cadre */
+/* p a:first-child      { color: yellow; background-color: black; }   → même résultat que a:first-child */
+/* a:not(:first-child)  { color: yellow; background-color: black; }   → tous les liens sauf les 1ers (7 liens) */
+/* p:not(:hover) a      { color: yellow; background-color: black; }   → tous les liens, sauf ceux du paragraphe survolé */
+/* div.cadre :not(p)    { color: yellow; background-color: black; }   → h3, inspiration, plagiat, se fourrent… */
+/* div.cadre > :not(p)  { color: yellow; background-color: black; }   → h3 seulement (enfants directs) */
+/* p::first-letter      { color: yellow; background-color: black; }   → la 1re lettre des 6 paragraphes */
+/* p::first-line        { color: yellow; background-color: black; }   → la 1re ligne des 6 paragraphes */
+
+/* ---------------------------------------------------------
+   Étape 6 — Écrire vos propres sélecteurs (réponses)
+   --------------------------------------------------------- */
+
+/* 1. Liens dans un paragraphe de classe important */
+/* p.important a { color: yellow; background-color: black; } */
+
+/* 2. Liens dans le paragraphe d'identificateur savoir */
+/* #savoir a { color: yellow; background-color: black; } */
+
+/* 3. Div qui suivent directement un p.important */
+/* p.important + div { color: yellow; background-color: black; } */
+
+/* 4. p.important situés dans un élément de classe cadre */
+/* .cadre p.important { color: yellow; background-color: black; } */
+
+/* 5. Premier paragraphe de chaque div.cadre
+      Piège : .cadre p:first-child ne cible que le 2e cadre,
+      car le premier enfant du 1er cadre est un <h3>. */
+/* .cadre > p:first-of-type { color: yellow; background-color: black; } */
+
+/* 6. Liens de rang pair dans un paragraphe */
+/* p a:nth-child(even) { color: yellow; background-color: black; } */
+
+/* 7. Liens qui mènent vers Wikipédia */
+/* a[href*="wikipedia"] { color: yellow; background-color: black; } */
+
+/* 8. Avant-dernier lien des paragraphes qui ne sont pas de classe important */
+/* p:not(.important) a:nth-last-child(2) { color: yellow; background-color: black; } */
+
+/* 9. Première lettre des p.important */
+/* p.important::first-letter { color: yellow; background-color: black; } */
+
+/* ---------------------------------------------------------
+   Étape 7 — ::before et ::after (règles actives)
+   --------------------------------------------------------- */
+
+/* Affiche l'adresse de chaque lien, en vert, après le lien */
+a::after {
+  color: green;
+  content: " (" attr(href) ") ";
+}
+
+/* Ajoute l'icône d'avertissement devant chaque élément .important */
+.important::before {
+  content: url("warning.jpg") " ";
+}

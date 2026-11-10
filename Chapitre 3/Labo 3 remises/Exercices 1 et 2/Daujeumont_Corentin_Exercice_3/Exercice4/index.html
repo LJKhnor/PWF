@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Inscription à l'atelier</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Inscription à l'atelier « Portfolio UX »</h1>
+    <form action="inscription.html" method="get">
+      <fieldset>
+        <label for="prenom">Prénom</label> <input type="text" id="prenom" name="prenom" autofocus required>
+        <label for="nom">Nom</label> <input type="text" id="nom" name="nom" required>
+        <label for="email">E-mail</label> <input type="email" id="email" name="email"
+          placeholder="ex. johndoe@hotmail.com" required>
+        <label for="age">Age</label> <input type="number" id="age" name="age" min="16" max="99" step="1" value="16">
+        <label for="tel">Téléphone</label>
+        <input type="tel" id="telephone" name="telephone" placeholder="01 23 45 67 89" pattern="0[1-9](?: [0-9]{2}){4}">
+
+      </fieldset>
+      <fieldset>
+        <legend>Votre profil</legend>
+        <label>Votre année : </label>
+        <input type="radio" id="annee1" name="annee" value="1">
+        <label for="annee1">1ere année</label>
+        <input type="radio" id="annee2" name="annee" value="2">
+        <label for="annee2">2eme année</label>
+        <input type="radio" id="annee3" name="annee" value="3">
+        <label for="annee3">3eme année</label>
+
+        <label for="outils">Vos outils : </label>
+        <input type="checkbox" id="figma" name="outils" value="figma">
+        <label for="figma">Figma</label>
+        <input type="checkbox" id="photoshop" name="outils" value="photoshop">
+        <label for="photoshop">Photoshop</label>
+        <input type="checkbox" id="vscode" name="outils" value="vscode">
+        <label for="vscode">VsCode</label>
+
+        <label for="centre">Centre IFAPME : </label>
+        <select name="centre" id="centre">
+          <optgroup label="Hainaut">
+            <option value="ch">Charleroi</option>
+            <option value="mo">Mons</option>
+          </optgroup>
+          <optgroup label="Liège">
+            <option value="li">Liège</option>
+            <option value="ve">Verviers</option>
+          </optgroup>
+        </select>
+
+        <label>Vos attentes : </label>
+        <textarea id="attentes" name="attentes" rows="4"></textarea>
+
+
+
+      </fieldset>
+
+      <button type="submit">S'inscrire</button>
+    </form>
+  </main>
+</body>
+
+</html>

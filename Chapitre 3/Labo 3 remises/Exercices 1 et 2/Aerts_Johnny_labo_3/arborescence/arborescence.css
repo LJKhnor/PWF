@@ -1,0 +1,51 @@
+.important a {
+color: yellow;
+background-color: black;
+}
+
+#savoir a {
+color: yellow;
+background-color: black;
+}
+
+div .important {
+    color: yellow;
+    background-color: black;
+}
+.cadre .important p {
+color: yellow;
+background-color: black;
+}
+
+div.cadre > p:first-of-type {
+    color: yellow;
+    background-color: black;
+}
+
+p a:nth-of-type(even) {
+    color: yellow;
+    background-color: black;
+}
+
+a[href*="wikipedia.org"] {
+    color: yellow;
+    background-color: black;
+}
+
+p:not(.important) a:nth-last-of-type(2) {
+    color: yellow;
+    background-color: black;
+}
+
+p.important::first-letter {
+    color: yellow;
+    background-color: black;
+}
+
+a::after {
+     color: green; content: " (" attr(href) ") "; 
+    }
+
+.important::before {
+     content: url("warning.jpg") " ";
+     }

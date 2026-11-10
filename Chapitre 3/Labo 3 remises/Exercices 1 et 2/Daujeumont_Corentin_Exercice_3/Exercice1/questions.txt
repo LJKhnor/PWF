@@ -1,0 +1,20 @@
+Etapes 2
+Q1 : 3 enfants
+Q2 : 4 descendants
+Q3 : 2 éléments
+Q4 : body - div.cadre
+Q5 : 4 frères - 2 frères
+Q6 : body avec 5 enfants
+Q7 : body avec 21 descendants
+
+Etapes 5
+1 : tous les enfants a de tous les paragraphes p
+2 : tous les enfants a de toutes les classes .cadre
+3 : les p enfants directs du body
+4 : le 1er p juste après un p (au meme niveau)
+5 : le a juste après un a juste après un a (au meme niveau)
+6 : le p juste après un div (au meme niveau)
+7 : tous les p freres arrivant après un div
+8 : un div qui a une classe important
+9 : toutes les classe important se trouvant dans un div
+10 : 

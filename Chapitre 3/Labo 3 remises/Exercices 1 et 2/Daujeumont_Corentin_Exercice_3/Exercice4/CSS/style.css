@@ -1,0 +1,43 @@
+fieldset {
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea,
+label[for*="centre"] {
+    display: block;
+}
+
+label[for*="outils"]::before {
+    content: "";
+    display: block;
+}
+
+:focus {
+    border: 2px;
+    border-color: blue;
+}
+
+:user-invalid {
+    border-color: red;
+}
+
+:checked+label {
+    font-weight: bold;
+}
+
+
+/* BONUS
+le placeholder indique un exemple en gris
+l'autofocus selectionne automatiquement le champ au chargement de la page
+
+un champ disabled ne s'affiche pas dans l'url
+un champ readonly s'affiche sans valeur*

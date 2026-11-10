@@ -1,0 +1,75 @@
+/* =========================================================
+   Labo 3 — Exercice 2 : bientôt le carnaval ! (corrigé)
+   L'identificateur « test » est placé sur le 1er <div>.
+   ========================================================= */
+
+/* 1. Un cadre noir, aéré, autour de chaque bloc */
+div {
+  border: 1px solid black;
+  padding: 8px;
+  margin-top: 6px;
+}
+
+/* 2. Un cadre noir de 2 px autour de chaque image */
+img {
+  border: 2px solid black;
+}
+
+/* 3. Les images du bloc #test en orange.
+      L'orange gagne sur le noir même si on inverse l'ordre des deux
+      règles : un sélecteur avec un id est plus précis (spécificité). */
+#test img {
+  border-color: orange;
+}
+
+/* 4. Une marge à gauche, seulement pour une image qui suit une image */
+img + img {
+  margin-left: 6px;
+}
+
+/* 5. Alignement vertical : les images s'alignent par le bas.
+      Une image de 100 px est relevée de 50 px (la moitié de 200 - 100),
+      une image de 150 px de 25 px : leurs centres s'alignent
+      sur ceux des images de 200 px. */
+img[height="100"] {
+  margin-bottom: 50px;
+}
+img[height="150"] {
+  margin-bottom: 25px;
+}
+
+/* 6. Les images PNG (fichier qui finit par .png) sur fond jaune.
+      Le fond n'apparaît que là où le PNG est transparent. */
+img[src$=".png"] {
+  background-color: yellow;
+}
+
+/* 7. La dernière image de chaque bloc en rouge.
+      Piège : img:last-child seul ne suffit pas pour le bloc #test,
+      où #test img (plus précis) garde l'orange. On l'ajoute donc. */
+img:last-child,
+#test img:last-child {
+  border-color: red;
+}
+
+/* 8. Un bloc sur trois en bleu clair : 3n + 1 donne 1, 4, 7…
+      Ici, tous les enfants de <body> sont des <div> :
+      :nth-child et :nth-of-type donnent le même résultat. */
+div:nth-child(3n+1) {
+  background-color: lightblue;
+}
+
+/* 9. Les PNG de 150 px de haut sur fond gris (deux conditions chaînées) */
+img[src$=".png"][height="150"] {
+  background-color: grey;
+}
+
+/* 10. L'image survolée : fond et cadre verts.
+       #test img:hover est nécessaire pour battre #test img (orange).
+       img[src]:hover a la même précision que la règle 9 et vient après :
+       les PNG grises deviennent bien vertes au survol. */
+img[src]:hover,
+#test img:hover {
+  background-color: green;
+  border: 2px solid green;
+}

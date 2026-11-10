@@ -1,0 +1,13 @@
+  .cadre {
+      border: 1px solid blue;
+      padding: 6px;
+  }
+
+  a::after {
+      color: green;
+      content: "(" attr(href) ")";
+  }
+
+  .important::before {
+      content: url("../images/warning.jpg") " ";
+  }

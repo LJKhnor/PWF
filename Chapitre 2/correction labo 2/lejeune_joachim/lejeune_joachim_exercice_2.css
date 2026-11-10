@@ -1,0 +1,93 @@
+/* =========================================================
+   Labo 2 - Exercice 2 : feuille de style externe
+   ========================================================= */
+
+/* ---------- Étape 3 : mise en page globale ---------- */
+
+body {
+  background-color: black;
+}
+
+/* Propriétés communes aux trois grandes zones */
+header, main, footer {
+  width: 800px;
+  background-color: lemonchiffon;
+  margin-left: auto;   /* centrage horizontal */
+  margin-right: auto;
+  padding: 6px;
+}
+
+/* Propriétés propres au header */
+header {
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 200%;
+  background-color: orange;
+  padding: 3px;
+}
+
+/* Propriétés propres au footer */
+footer {
+  margin-top: 4px;
+  color: gray;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ---------- Étape 4 : les énigmes ---------- */
+
+/* Question : pourquoi margin-bottom:4px ne crée-t-il pas de ligne noire entre les énigmes ?
+   Réponse : les <article> sont DANS <main>. La marge laisse donc voir le fond de leur parent,
+   c'est-à-dire le lemonchiffon de <main>, et non le noir de <body>. */
+article {
+  border: 2px dotted black;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 4px;
+}
+
+/* Question : pourquoi utiliser du PNG plutôt que du JPG pour l'ampoule ?
+   Réponse : le PNG gère la transparence (le fond palegoldenrod reste visible autour
+   de l'ampoule) et il est sans perte, idéal pour une icône aux contours nets.
+   Le JPG n'a pas de transparence et produit des artefacts autour des contours. */
+h2 {
+  background-color: palegoldenrod;
+  background-image: url('ampoule.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  padding-left: 40px;
+  margin-top: 0;
+}
+
+/* ---------- Étape 5 : les solutions ---------- */
+
+.solution {
+  color: lemonchiffon;          /* même couleur que le fond => texte invisible */
+  border: 1px solid orange;
+  padding: 4px;
+  margin-bottom: 0;
+}
+
+.solution:hover {
+  color: black;                 /* révélé au survol */
+}
+
+/* ---------- Étape 6 : les énoncés ---------- */
+
+#gateau {
+  width: 200px;
+}
+
+.enonce {
+  font-style: italic;
+}
+
+/* Bonus : les lignes de chiffres de l'énigme "Tour de nombres" */
+.nombres {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-style: normal;
+  margin: 2px 0;
+}

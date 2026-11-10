@@ -1,0 +1,28 @@
+#div{
+    border: solid; color:black; width: 1px;
+    padding: 8px; margin-top: 6px;
+}
+
+img{
+    border: solid; color:black; width: 2px;
+}
+
+#div_test{
+   border: dotted; color: orange; width: 2px; 
+}
+
+:not(first img src){
+    margin-left: 6px;
+}
+
+#img[height-100]{
+    margin-bottom: 50px;
+}
+
+#img[height-150]{
+    margin-bottom: 25px;
+}
+
+#png{
+    background-color: yellow;
+}
